@@ -16,7 +16,7 @@ twitterのAPI経由ではユーザーの設定した誕生日情報がとって�
 前提)  
 twitterのOAuthを突破しなければならないので各個人でこんしゅーまーきーなりあくせーすとくーんなりを生成するといいと思う。    
 生成したら  
-```twitter.ini
+```txt:twitter.ini
 [Twitter]
 CK=xxxxxxxxxxxxxxxxxxxxxx
 CS=xxxxxxxxxxxxxxxxxxxxxx
