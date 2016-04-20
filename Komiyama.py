@@ -9,7 +9,7 @@ import sqlite3
 import __main__
 import threading
 import time
-
+import ConfigParser
 
 class SubThread(threading.Thread):
 
@@ -30,12 +30,10 @@ class SubThread(threading.Thread):
 count_flg = False
 
 def get_oauth():
-    CK = 'mDrMIeicXo4ZoBOEZWFbStsA4'                             # Consumer Key
-    CS = 'Q36qnSugdCLo1K5OJdMof91ekpfF9grnmVccffrHfhH4UEFQBg'         # Consumer Secret
-    AT = '594426578-SE3o6MCElN09MbgFDEkLjvENG8hKp7aD7WcIhMaU' # Access Token
-    AS = '3CCOLiDuHQgx9kXMqqg03O0uLmuti3oAblyWuHgfd9mBt'         # Accesss Token Secert
-    auth = OAuthHandler(CK, CS)
-    auth.set_access_token(AT, AS)
+    conf = ConfigParser.SafeConfigParser()
+    conf.read("twitter.ini")
+    auth = OAuthHandler(conf.get("Twitter", "CK"), conf.get("Twitter", "CS"))
+    auth.set_access_token(conf.get("Twitter", "AT"), conf.get("Twitter", "AS"))
 
     return auth
 
