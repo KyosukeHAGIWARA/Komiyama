@@ -11,3 +11,16 @@ tweepyでstreamingAPIを使っているから落ちない限りずっとTLを見
 twitterのAPI経由ではユーザーの設定した誕生日情報がとってこれない。  
 無理矢理プロフィールページをスクレイピングしてとってくる。  
 そもそも全員に公開で誕生日情報を設定しているtwitterユーザーそんなにいないでしょ。
+
+##Usage
+前提)  
+twitterのOAuthを突破しなければならないので各個人でこんしゅーまーきーなりあくせーすとくーんなりを生成するといいと思う。    
+生成したら  
+```twitter.ini
+[Twitter]
+CK=xxxxxxxxxxxxxxxxxxxxxx
+CS=xxxxxxxxxxxxxxxxxxxxxx
+AT=xxxxxxxxxxxxxxxxxxxxxx
+AS=xxxxxxxxxxxxxxxxxxxxxx
+```
+ってファイルを作ると動く。自分だけのbotにできるね。
